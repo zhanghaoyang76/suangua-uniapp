@@ -1,12 +1,14 @@
 const { makeChart } = require('../../lib/qimen')
 const { interpret } = require('../../lib/interpretation')
-const ai = require('../../lib/ai')
+const deepReadingService = require('../../lib/ai')
 
 Page({
   data: {
     question: '',
     chart: null,
     reading: null,
+    deepReading: '',
+    deepReadingLoading: false,
     ready: false,
     leaving: false
   },
@@ -26,24 +28,32 @@ Page({
     }, 30)
   },
 
-  askAi() {
-    if (!ai.isEnabled()) {
+  askDeepReading() {
+    if (this.data.deepReadingLoading) return
+
+    if (!deepReadingService.isEnabled()) {
       wx.showToast({
-        title: '此功能暂未开启',
+        title: '玄机详解暂未开启',
         icon: 'none'
       })
       return
     }
 
-    wx.showLoading({ title: '解读中' })
-    ai.requestDeepReading(this.data.question, this.data.chart, this.data.reading)
-      .catch(() => {
+    this.setData({ deepReadingLoading: true })
+    wx.showLoading({ title: '推演中' })
+    deepReadingService.requestDeepReading(this.data.question, this.data.chart, this.data.reading)
+      .then(deepReading => {
+        this.setData({ deepReading })
+      })
+      .catch(error => {
+        console.error('玄机详解请求失败', error)
         wx.showToast({
-          title: '深度解读暂不可用',
+          title: error.message || '玄机详解暂不可用',
           icon: 'none'
         })
       })
       .finally(() => {
+        this.setData({ deepReadingLoading: false })
         wx.hideLoading()
       })
   },

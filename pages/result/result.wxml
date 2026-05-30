@@ -54,8 +54,15 @@
       <view class="reading-item"><text>提醒：</text>{{reading.advice}}</view>
     </view>
 
+    <view wx:if="{{deepReading}}" class="deep-reading">
+      <view class="deep-reading-title">玄机详解</view>
+      <text class="deep-reading-text">{{deepReading}}</text>
+    </view>
+
     <view class="result-actions">
-      <button class="ai-button" hover-class="action-button-active" bindtap="askAi">AI 深度解读</button>
+      <button class="deep-reading-button" loading="{{deepReadingLoading}}" disabled="{{deepReadingLoading}}" hover-class="action-button-active" bindtap="askDeepReading">
+        {{deepReading ? '重新推演' : '玄机详解'}}
+      </button>
       <button class="home-button" hover-class="action-button-active" bindtap="backHome">返回首页</button>
     </view>
   </view>

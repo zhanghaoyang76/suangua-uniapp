@@ -10,6 +10,7 @@
 .steps,
 .palace-grid,
 .reading,
+.deep-reading,
 .result-actions {
   opacity: 0;
   transform: translateY(28rpx);
@@ -47,8 +48,12 @@
   animation: resultLayerIn 460ms 460ms ease both;
 }
 
-.result.ready .result-actions {
+.result.ready .deep-reading {
   animation: resultLayerIn 420ms 540ms ease both;
+}
+
+.result.ready .result-actions {
+  animation: resultLayerIn 420ms 620ms ease both;
 }
 
 .result.leaving .result-content {
@@ -230,11 +235,34 @@
   font-weight: 700;
 }
 
+.deep-reading {
+  margin-top: 34rpx;
+  padding: 36rpx 34rpx;
+  background: rgba(24, 12, 6, 0.66);
+  border: 2rpx solid rgba(208, 163, 95, 0.58);
+  box-shadow: inset 0 0 0 5rpx rgba(91, 52, 21, 0.28);
+}
+
+.deep-reading-title {
+  color: #e0c18a;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.deep-reading-text {
+  display: block;
+  margin-top: 22rpx;
+  color: #caa66a;
+  font-size: 28rpx;
+  line-height: 1.78;
+  white-space: pre-wrap;
+}
+
 .result-actions {
   margin-top: 42rpx;
 }
 
-.ai-button,
+.deep-reading-button,
 .home-button {
   display: flex;
   align-items: center;
