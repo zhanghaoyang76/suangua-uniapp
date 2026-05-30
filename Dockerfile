@@ -8,6 +8,7 @@ RUN npm install --omit=dev
 COPY server/ ./
 
 ENV NODE_ENV=production
-EXPOSE 8787
+ENV PORT=80
+EXPOSE 80
 
 CMD ["npm", "start"]
