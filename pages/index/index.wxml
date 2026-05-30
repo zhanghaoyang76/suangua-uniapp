@@ -1,0 +1,38 @@
+<view class="page-shell home">
+  <view class="safe-content home-content">
+    <view class="time-slip">乙巳年 丙午月 甲子时</view>
+    <view class="gold-line top-line"></view>
+
+    <view class="title-block">
+      <text class="title">奇门遁甲</text>
+      <text class="subtitle">一念问事，依时成局</text>
+    </view>
+
+    <view class="vertical left">九宫定方位</view>
+    <view class="vertical right">八门察吉凶</view>
+
+    <view class="qimen-plate" aria-hidden="true">
+      <view class="plate-ring outer"></view>
+      <view class="plate-ring inner"></view>
+      <view class="grid-line h one"></view>
+      <view class="grid-line h two"></view>
+      <view class="grid-line v one"></view>
+      <view class="grid-line v two"></view>
+      <view class="star-line diag-a"></view>
+      <view class="star-line diag-b"></view>
+      <view class="palace p1">休</view>
+      <view class="palace p2">生</view>
+      <view class="palace p3">伤</view>
+      <view class="palace p4">杜</view>
+      <view class="palace p5">戊</view>
+      <view class="palace p6">景</view>
+      <view class="palace p7">死</view>
+      <view class="palace p8">惊</view>
+      <view class="palace p9">开</view>
+      <view class="center-seal">遁甲</view>
+    </view>
+
+    <button class="seal-button entry-button" bindtap="enterAsk">入局问卦</button>
+    <text class="muted-text footer-note">此局但作闲占，不作定论</text>
+  </view>
+</view>

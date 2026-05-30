@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ask/ask",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#120b07",
+    "backgroundTextStyle": "dark"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

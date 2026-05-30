@@ -1,0 +1,41 @@
+<view class="page-shell result">
+  <view class="safe-content result-content">
+    <view class="result-title">本局已成</view>
+    <view class="gold-line result-line"></view>
+
+    <view class="question-text">“{{question}}”</view>
+
+    <view class="meta-row">
+      <text>{{chart.timeText}}</text>
+      <text>{{chart.solarTerm}} {{chart.yuan}}</text>
+    </view>
+    <view class="meta-row strong">
+      <text>{{chart.dun}}{{chart.juNumber}}局</text>
+      <text>日 {{chart.dayGanzhi}} · 时 {{chart.hourGanzhi}}</text>
+    </view>
+
+    <view class="steps">
+      <view wx:for="{{chart.processSteps}}" wx:key="*this" class="step-item">{{item}}</view>
+    </view>
+
+    <view class="palace-grid">
+      <view wx:for="{{chart.palaces}}" wx:key="id" class="palace-cell {{item.isKey ? 'key' : ''}}">
+        <view class="cell-top">{{item.direction}}</view>
+        <view class="cell-door">{{item.door}}</view>
+        <view class="cell-sub">{{item.star}} · {{item.god}}</view>
+        <view class="cell-stem">{{item.heavenlyStem}} / {{item.earthlyStem}}</view>
+      </view>
+    </view>
+
+    <view class="reading">
+      <view class="level-mark">{{reading.level}}</view>
+      <view class="reading-title">传统断语</view>
+      <view class="reading-text">{{reading.summary}}</view>
+      <view class="reading-item"><text>宜：</text>{{reading.suitable}}</view>
+      <view class="reading-item"><text>忌：</text>{{reading.avoid}}</view>
+      <view class="reading-item"><text>提醒：</text>{{reading.advice}}</view>
+    </view>
+
+    <button class="ai-button" bindtap="askAi">AI 深度解读</button>
+  </view>
+</view>

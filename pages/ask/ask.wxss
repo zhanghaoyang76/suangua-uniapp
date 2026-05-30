@@ -1,0 +1,97 @@
+.ask-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ask-title {
+  color: #e0c18a;
+  font-size: 56rpx;
+  font-weight: 700;
+  animation: fadeRise 700ms ease both;
+}
+
+.ask-line {
+  width: 420rpx;
+  margin: 34rpx 0 72rpx;
+  animation: drawIn 800ms ease both;
+}
+
+.question-input {
+  width: 560rpx;
+  height: 260rpx;
+  padding: 34rpx;
+  box-sizing: border-box;
+  color: #ead09a;
+  font-size: 34rpx;
+  line-height: 1.65;
+  background: rgba(12, 7, 4, 0.62);
+  border: 3rpx solid rgba(176, 128, 61, 0.7);
+  box-shadow: inset 0 0 0 8rpx rgba(36, 21, 11, 0.72), 0 24rpx 42rpx rgba(0, 0, 0, 0.36);
+  animation: fadeRise 760ms 80ms ease both;
+}
+
+.question-placeholder {
+  color: rgba(166, 128, 81, 0.68);
+}
+
+.cast-button {
+  margin-top: 88rpx;
+  animation: sealPulse 3s ease-in-out infinite;
+}
+
+.casting-mask {
+  position: fixed;
+  z-index: 9;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(5, 3, 2, 0.88);
+}
+
+.lot-box {
+  position: relative;
+  width: 360rpx;
+  height: 340rpx;
+}
+
+.lot-stick {
+  position: absolute;
+  top: 0;
+  left: 142rpx;
+  width: 76rpx;
+  height: 300rpx;
+  color: #6e1c22;
+  font-size: 42rpx;
+  font-weight: 700;
+  line-height: 300rpx;
+  text-align: center;
+  background: linear-gradient(#d7ba78, #8f642e);
+  border: 3rpx solid #e2c98d;
+  box-shadow: 0 20rpx 34rpx rgba(0, 0, 0, 0.45);
+  transform-origin: bottom center;
+  animation: lotDrop 980ms ease both;
+}
+
+.lot-stick.one {
+  transform: rotate(-14deg);
+}
+
+.lot-stick.two {
+  left: 112rpx;
+  animation-delay: 120ms;
+}
+
+.lot-stick.three {
+  left: 172rpx;
+  animation-delay: 220ms;
+}
+
+.casting-text {
+  margin-top: 20rpx;
+  color: #d6b979;
+  font-size: 30rpx;
+}

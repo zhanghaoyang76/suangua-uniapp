@@ -1,0 +1,9 @@
+{
+  "desc": "不做搜索索引配置",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

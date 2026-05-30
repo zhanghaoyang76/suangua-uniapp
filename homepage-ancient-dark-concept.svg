@@ -1,0 +1,115 @@
+<svg width="1200" height="1800" viewBox="0 0 1200 1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="36%" r="82%">
+      <stop offset="0" stop-color="#251239"/>
+      <stop offset="0.48" stop-color="#12081d"/>
+      <stop offset="1" stop-color="#040205"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2d28a"/>
+      <stop offset="0.48" stop-color="#a9752f"/>
+      <stop offset="1" stop-color="#4b2c10"/>
+    </linearGradient>
+    <linearGradient id="lacquer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b174d"/>
+      <stop offset="0.52" stop-color="#16091f"/>
+      <stop offset="1" stop-color="#08030b"/>
+    </linearGradient>
+    <filter id="inkShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <filter id="goldGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#b98538" flood-opacity="0.45"/>
+    </filter>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M8 22C36 14 48 30 72 20C92 12 105 17 116 9" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.035"/>
+      <path d="M2 82C32 70 48 92 78 78C94 70 106 74 118 64" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.03"/>
+      <circle cx="32" cy="44" r="1.3" fill="#ffffff" opacity="0.035"/>
+      <circle cx="88" cy="102" r="1.1" fill="#ffffff" opacity="0.03"/>
+    </pattern>
+    <style>
+      .seal { font: 700 34px "STKaiti", "KaiTi", "SimKai", serif; fill: #f4d9ac; letter-spacing: 0; }
+      .title { font: 700 86px "STKaiti", "KaiTi", "SimKai", serif; fill: #ead09a; letter-spacing: 0; }
+      .sub { font: 400 28px "STKaiti", "KaiTi", "SimKai", serif; fill: #b8996e; letter-spacing: 0; }
+      .small { font: 400 22px "STKaiti", "KaiTi", "SimKai", serif; fill: #806b91; letter-spacing: 0; }
+      .btn { font: 700 34px "STKaiti", "KaiTi", "SimKai", serif; fill: #f9e4b4; letter-spacing: 0; }
+      .grid { font: 500 28px "STKaiti", "KaiTi", "SimKai", serif; fill: #d7b979; letter-spacing: 0; }
+      .faint { font: 400 24px "STKaiti", "KaiTi", "SimKai", serif; fill: #5f4a72; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1800" fill="url(#paper)"/>
+  <rect width="1200" height="1800" fill="url(#grain)"/>
+
+  <g opacity="0.22" stroke="#8e6a2d" stroke-width="2" fill="none">
+    <rect x="72" y="72" width="1056" height="1656"/>
+    <rect x="98" y="98" width="1004" height="1604"/>
+    <path d="M130 150h160M130 150c44 34 44 72 0 106M1070 150H910M1070 150c-44 34-44 72 0 106"/>
+    <path d="M130 1650h160M130 1650c44-34 44-72 0-106M1070 1650H910M1070 1650c-44-34-44-72 0-106"/>
+  </g>
+
+  <g opacity="0.18" fill="none" stroke="#6f4a96" stroke-width="3">
+    <path d="M176 386c50-54 104-54 158 0c-52-22-105-20-158 0Z"/>
+    <path d="M866 386c50-54 104-54 158 0c-52-22-105-20-158 0Z"/>
+    <path d="M176 1378c50 54 104 54 158 0c-52 22-105 20-158 0Z"/>
+    <path d="M866 1378c50 54 104 54 158 0c-52 22-105 20-158 0Z"/>
+  </g>
+
+  <g transform="translate(600 188)">
+    <rect x="-208" y="-52" width="416" height="104" rx="8" fill="#0a050b" stroke="url(#gold)" stroke-width="2" filter="url(#inkShadow)"/>
+    <path d="M-180 -31H180M-180 31H180" stroke="#4f2d68" stroke-width="1"/>
+    <text x="0" y="14" text-anchor="middle" class="seal">奇门起局 · 问事即断</text>
+  </g>
+
+  <text x="600" y="348" text-anchor="middle" class="title">奇门遁甲</text>
+  <text x="600" y="414" text-anchor="middle" class="sub">观时辰入局，察九宫门星，断趋避宜忌</text>
+
+  <g transform="translate(600 790)" filter="url(#inkShadow)">
+    <circle r="318" fill="#09040d" stroke="#271132" stroke-width="20"/>
+    <circle r="304" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <circle r="258" fill="none" stroke="#7c5b2c" stroke-width="2" opacity="0.85"/>
+    <circle r="206" fill="none" stroke="#4f2b76" stroke-width="2" opacity="0.7"/>
+    <g stroke="#b98b45" stroke-width="3" opacity="0.95">
+      <line x1="-210" y1="-70" x2="210" y2="-70"/>
+      <line x1="-210" y1="70" x2="210" y2="70"/>
+      <line x1="-70" y1="-210" x2="-70" y2="210"/>
+      <line x1="70" y1="-210" x2="70" y2="210"/>
+    </g>
+    <g stroke="#69409b" stroke-width="1.6" opacity="0.75">
+      <path d="M0-258L76-76L258 0L76 76L0 258L-76 76L-258 0L-76-76Z"/>
+      <path d="M-182-182L182 182M182-182L-182 182"/>
+    </g>
+    <g class="grid">
+      <text x="-140" y="-128" text-anchor="middle">休</text>
+      <text x="0" y="-128" text-anchor="middle">生</text>
+      <text x="140" y="-128" text-anchor="middle">伤</text>
+      <text x="-140" y="12" text-anchor="middle">杜</text>
+      <text x="0" y="12" text-anchor="middle">中</text>
+      <text x="140" y="12" text-anchor="middle">景</text>
+      <text x="-140" y="152" text-anchor="middle">死</text>
+      <text x="0" y="152" text-anchor="middle">惊</text>
+      <text x="140" y="152" text-anchor="middle">开</text>
+    </g>
+    <g fill="#a22b35" stroke="#e2b777" stroke-width="2" opacity="0.9">
+      <rect x="-44" y="-44" width="88" height="88" rx="4"/>
+      <text x="0" y="12" text-anchor="middle" class="seal" style="font-size:30px;fill:#f4d9ac">遁甲</text>
+    </g>
+  </g>
+
+  <g transform="translate(296 1216)" filter="url(#goldGlow)">
+    <path d="M0 0H608C642 0 670 28 670 62S642 124 608 124H0C34 92 34 32 0 0Z" fill="url(#lacquer)" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M670 0C636 32 636 92 670 124H62C28 124 0 96 0 62S28 0 62 0H670Z" fill="none" stroke="#6b3a90" stroke-width="1.5" opacity="0.7"/>
+    <text x="335" y="78" text-anchor="middle" class="btn">入局问卦</text>
+  </g>
+
+  <text x="600" y="1398" text-anchor="middle" class="small">娱乐参考 · 一问一局 · 不留卦档</text>
+
+  <g opacity="0.32">
+    <rect x="178" y="1450" width="116" height="116" rx="8" fill="none" stroke="#8f2630" stroke-width="4"/>
+    <text x="236" y="1501" text-anchor="middle" class="faint">值</text>
+    <text x="236" y="1538" text-anchor="middle" class="faint">符</text>
+    <rect x="906" y="1450" width="116" height="116" rx="8" fill="none" stroke="#8f2630" stroke-width="4"/>
+    <text x="964" y="1501" text-anchor="middle" class="faint">九</text>
+    <text x="964" y="1538" text-anchor="middle" class="faint">星</text>
+  </g>
+</svg>

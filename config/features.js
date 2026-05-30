@@ -1,0 +1,3 @@
+module.exports = {
+  aiEnabled: false
+}

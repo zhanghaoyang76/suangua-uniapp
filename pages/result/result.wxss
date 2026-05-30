@@ -1,0 +1,148 @@
+.result-content {
+  padding-bottom: 96rpx;
+}
+
+.result-title {
+  margin-top: 28rpx;
+  color: #e0c18a;
+  font-size: 56rpx;
+  font-weight: 700;
+  text-align: center;
+  animation: fadeRise 680ms ease both;
+}
+
+.result-line {
+  width: 420rpx;
+  margin: 30rpx auto 48rpx;
+  animation: drawIn 820ms ease both;
+}
+
+.question-text {
+  color: #caa66a;
+  font-size: 30rpx;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  color: #9d7b4e;
+  font-size: 24rpx;
+}
+
+.meta-row.strong {
+  color: #e0c18a;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.steps {
+  margin-top: 42rpx;
+  padding: 30rpx 34rpx;
+  background: rgba(10, 6, 4, 0.48);
+  border: 2rpx solid rgba(177, 128, 61, 0.52);
+  box-shadow: inset 0 0 0 6rpx rgba(38, 22, 12, 0.5);
+}
+
+.step-item {
+  color: #b89562;
+  font-size: 25rpx;
+  line-height: 1.8;
+}
+
+.palace-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rpx;
+  margin-top: 42rpx;
+  padding: 8rpx;
+  background: rgba(184, 138, 69, 0.58);
+  box-shadow: 0 28rpx 44rpx rgba(0, 0, 0, 0.34);
+}
+
+.palace-cell {
+  min-height: 160rpx;
+  padding: 16rpx 10rpx;
+  box-sizing: border-box;
+  text-align: center;
+  background: #130b07;
+  border: 2rpx solid rgba(82, 49, 25, 0.9);
+}
+
+.palace-cell.key {
+  background: #241008;
+  box-shadow: inset 0 0 0 4rpx rgba(123, 28, 32, 0.78);
+}
+
+.cell-top {
+  color: #8b6b44;
+  font-size: 20rpx;
+}
+
+.cell-door {
+  margin-top: 8rpx;
+  color: #e0c18a;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.cell-sub,
+.cell-stem {
+  margin-top: 8rpx;
+  color: #a98756;
+  font-size: 21rpx;
+}
+
+.reading {
+  position: relative;
+  margin-top: 48rpx;
+  padding: 42rpx 34rpx 34rpx;
+  background: rgba(9, 5, 3, 0.62);
+  border: 3rpx solid rgba(177, 128, 61, 0.62);
+}
+
+.level-mark {
+  position: absolute;
+  top: -30rpx;
+  right: 32rpx;
+  width: 82rpx;
+  height: 82rpx;
+  color: #f0d5aa;
+  font-size: 38rpx;
+  font-weight: 700;
+  line-height: 82rpx;
+  text-align: center;
+  background: #7b1c20;
+  border: 3rpx solid #d0a35f;
+}
+
+.reading-title {
+  color: #e0c18a;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.reading-text,
+.reading-item {
+  margin-top: 22rpx;
+  color: #caa66a;
+  font-size: 28rpx;
+  line-height: 1.72;
+}
+
+.reading-item text {
+  color: #e0c18a;
+  font-weight: 700;
+}
+
+.ai-button {
+  width: 100%;
+  height: 96rpx;
+  margin-top: 42rpx;
+  color: #e7c899;
+  font-size: 30rpx;
+  background: rgba(116, 24, 32, 0.78);
+  border: 3rpx solid rgba(208, 163, 95, 0.86);
+}

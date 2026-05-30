@@ -1,0 +1,95 @@
+<svg width="1200" height="1800" viewBox="0 0 1200 1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg1" cx="50%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#34205d"/>
+      <stop offset="0.42" stop-color="#13091f"/>
+      <stop offset="1" stop-color="#050309"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#b77cff" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#6c35b8" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c79aff"/>
+      <stop offset="0.5" stop-color="#8a4dff"/>
+      <stop offset="1" stop-color="#4a1a9d"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9b8ff"/>
+      <stop offset="0.5" stop-color="#7a46e8"/>
+      <stop offset="1" stop-color="#261044"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="30" stdDeviation="30" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="purpleGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#9b5cff" flood-opacity="0.75"/>
+    </filter>
+    <style>
+      .brand { font: 700 56px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #f4eaff; letter-spacing: 0; }
+      .sub { font: 400 24px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #c7b8da; letter-spacing: 0; }
+      .small { font: 400 20px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #9b8ab5; letter-spacing: 0; }
+      .btn { font: 700 30px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #fff9ff; letter-spacing: 0; }
+      .caption { font: 400 18px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #81708f; letter-spacing: 0; }
+      .gridText { font: 400 18px "Microsoft YaHei", "PingFang SC", sans-serif; fill: #ab92d6; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1800" fill="url(#bg1)"/>
+  <rect width="1200" height="1800" fill="#000000" opacity="0.2"/>
+  <circle cx="600" cy="760" r="480" fill="url(#glow)"/>
+  <circle cx="600" cy="760" r="325" fill="none" stroke="#6f41cc" stroke-width="1.5" opacity="0.22"/>
+  <circle cx="600" cy="760" r="246" fill="none" stroke="#d6b5ff" stroke-width="1" opacity="0.16"/>
+
+  <g opacity="0.24">
+    <path d="M120 300H1080M120 420H1080M120 540H1080M120 660H1080M120 780H1080M120 900H1080M120 1020H1080" stroke="#7550a6" stroke-width="1"/>
+    <path d="M240 220V1100M360 220V1100M480 220V1100M600 220V1100M720 220V1100M840 220V1100M960 220V1100" stroke="#7550a6" stroke-width="1"/>
+  </g>
+
+  <text x="600" y="210" text-anchor="middle" class="small">奇门起局 · 问事即断</text>
+  <text x="600" y="302" text-anchor="middle" class="brand">奇门遁甲</text>
+  <text x="600" y="356" text-anchor="middle" class="sub">以当前时辰起局，观门星神宫，断吉凶宜忌</text>
+
+  <g transform="translate(600 735)" filter="url(#softShadow)">
+    <circle r="240" fill="#0d0715" stroke="url(#ring)" stroke-width="4"/>
+    <circle r="194" fill="none" stroke="#58359b" stroke-width="2" opacity="0.85"/>
+    <circle r="132" fill="none" stroke="#8762c8" stroke-width="1" opacity="0.42"/>
+    <g stroke="#9d79df" stroke-width="2" opacity="0.72">
+      <line x1="-194" y1="-65" x2="194" y2="-65"/>
+      <line x1="-194" y1="65" x2="194" y2="65"/>
+      <line x1="-65" y1="-194" x2="-65" y2="194"/>
+      <line x1="65" y1="-194" x2="65" y2="194"/>
+    </g>
+    <g class="gridText">
+      <text x="-128" y="-118" text-anchor="middle">休</text>
+      <text x="0" y="-118" text-anchor="middle">生</text>
+      <text x="128" y="-118" text-anchor="middle">伤</text>
+      <text x="-128" y="8" text-anchor="middle">杜</text>
+      <text x="0" y="8" text-anchor="middle">中</text>
+      <text x="128" y="8" text-anchor="middle">景</text>
+      <text x="-128" y="136" text-anchor="middle">死</text>
+      <text x="0" y="136" text-anchor="middle">惊</text>
+      <text x="128" y="136" text-anchor="middle">开</text>
+    </g>
+    <g opacity="0.9">
+      <path d="M0 -226L18 -184L0 -196L-18 -184Z" fill="#d8b7ff"/>
+      <path d="M226 0L184 18L196 0L184 -18Z" fill="#8f5cff"/>
+      <path d="M0 226L-18 184L0 196L18 184Z" fill="#d8b7ff"/>
+      <path d="M-226 0L-184 -18L-196 0L-184 18Z" fill="#8f5cff"/>
+    </g>
+  </g>
+
+  <g transform="translate(250 1090)" filter="url(#purpleGlow)">
+    <rect width="700" height="104" rx="52" fill="url(#button)"/>
+    <text x="350" y="66" text-anchor="middle" class="btn">开始问卦</text>
+  </g>
+  <text x="600" y="1252" text-anchor="middle" class="caption">娱乐参考 · 不保存历史 · AI 深度解读可后续开启</text>
+
+  <g opacity="0.25">
+    <text x="120" y="1540" class="small">值符</text>
+    <text x="985" y="1458" class="small">九星</text>
+    <text x="150" y="1336" class="small">八门</text>
+    <text x="942" y="1628" class="small">八神</text>
+  </g>
+</svg>

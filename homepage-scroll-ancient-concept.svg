@@ -1,0 +1,120 @@
+<svg width="1200" height="1800" viewBox="0 0 1200 1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="deep" cx="50%" cy="42%" r="86%">
+      <stop offset="0" stop-color="#1d1027"/>
+      <stop offset="0.52" stop-color="#0b0610"/>
+      <stop offset="1" stop-color="#020102"/>
+    </radialGradient>
+    <linearGradient id="oldPaper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2130" stop-opacity="0.56"/>
+      <stop offset="0.5" stop-color="#141018" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#070508" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="wornGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1d497"/>
+      <stop offset="0.28" stop-color="#8d6a31"/>
+      <stop offset="0.7" stop-color="#c8a463"/>
+      <stop offset="1" stop-color="#3f2910"/>
+    </linearGradient>
+    <filter id="heavyInk" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.86"/>
+    </filter>
+    <filter id="sealShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#000000" flood-opacity="0.72"/>
+    </filter>
+    <pattern id="fiber" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M4 14C24 8 41 20 62 11C74 6 82 8 90 4" fill="none" stroke="#d9c6a3" stroke-width="0.8" opacity="0.035"/>
+      <path d="M0 58C22 49 38 65 58 55C72 48 82 50 90 45" fill="none" stroke="#d9c6a3" stroke-width="0.8" opacity="0.03"/>
+      <path d="M15 84C33 75 49 91 70 80" fill="none" stroke="#704f8d" stroke-width="0.8" opacity="0.035"/>
+    </pattern>
+    <style>
+      .main { font: 700 92px "STKaiti", "KaiTi", "SimKai", serif; fill: #dbc28d; letter-spacing: 0; }
+      .vertical { font: 500 30px "STKaiti", "KaiTi", "SimKai", serif; fill: #9c8059; letter-spacing: 0; writing-mode: tb; glyph-orientation-vertical: 0; }
+      .sub { font: 400 26px "STKaiti", "KaiTi", "SimKai", serif; fill: #a58a66; letter-spacing: 0; }
+      .gate { font: 700 43px "STKaiti", "KaiTi", "SimKai", serif; fill: #f2ddb4; letter-spacing: 0; }
+      .palace { font: 500 30px "STKaiti", "KaiTi", "SimKai", serif; fill: #c5a766; letter-spacing: 0; }
+      .faded { font: 400 24px "STKaiti", "KaiTi", "SimKai", serif; fill: #5e496e; letter-spacing: 0; }
+      .sealText { font: 700 30px "STKaiti", "KaiTi", "SimKai", serif; fill: #f0d5aa; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1800" fill="url(#deep)"/>
+  <rect width="1200" height="1800" fill="url(#fiber)"/>
+  <rect x="126" y="76" width="948" height="1648" rx="18" fill="url(#oldPaper)" stroke="#5e4525" stroke-width="3" opacity="0.96"/>
+  <path d="M174 124H1026V1676H174Z" fill="none" stroke="#25132f" stroke-width="16" opacity="0.88"/>
+  <path d="M196 146H1004V1654H196Z" fill="none" stroke="url(#wornGold)" stroke-width="2.5" opacity="0.74"/>
+
+  <g opacity="0.2" stroke="#96703a" stroke-width="2" fill="none">
+    <path d="M240 210c36 20 64 20 100 0c-24 38-76 38-100 0Z"/>
+    <path d="M860 210c36 20 64 20 100 0c-24 38-76 38-100 0Z"/>
+    <path d="M240 1590c36-20 64-20 100 0c-24-38-76-38-100 0Z"/>
+    <path d="M860 1590c36-20 64-20 100 0c-24-38-76-38-100 0Z"/>
+  </g>
+
+  <g transform="translate(600 238)">
+    <text x="0" y="0" text-anchor="middle" class="sub">乙巳年 丙午月 甲子时</text>
+    <path d="M370 32C230 58 122 62 0 62S-230 58-370 32" fill="none" stroke="#6f512c" stroke-width="2" opacity="0.58"/>
+  </g>
+
+  <text x="600" y="398" text-anchor="middle" class="main">奇门遁甲</text>
+  <text x="600" y="464" text-anchor="middle" class="sub">一念问事，依时成局</text>
+
+  <text x="272" y="538" class="vertical">九宫定方位</text>
+  <text x="928" y="538" class="vertical">八门察吉凶</text>
+
+  <g transform="translate(600 844)" filter="url(#heavyInk)">
+    <path d="M0-336C122-336 232-272 290-168C350-60 338 78 266 176C194 278 86 334 0 334C-86 334-194 278-266 176C-338 78-350-60-290-168C-232-272-122-336 0-336Z" fill="#050307" stroke="#2b1835" stroke-width="18"/>
+    <path d="M0-316C112-316 214-256 268-158C324-56 314 70 248 162C180 260 80 314 0 314C-80 314-180 260-248 162C-314 70-324-56-268-158C-214-256-112-316 0-316Z" fill="none" stroke="url(#wornGold)" stroke-width="3"/>
+    <circle r="236" fill="none" stroke="#85683b" stroke-width="2.5" opacity="0.78"/>
+    <circle r="176" fill="none" stroke="#4e3271" stroke-width="2" opacity="0.65"/>
+
+    <g stroke="#b78f4d" stroke-width="3">
+      <line x1="-198" y1="-66" x2="198" y2="-66"/>
+      <line x1="-198" y1="66" x2="198" y2="66"/>
+      <line x1="-66" y1="-198" x2="-66" y2="198"/>
+      <line x1="66" y1="-198" x2="66" y2="198"/>
+    </g>
+    <g stroke="#553173" stroke-width="2" opacity="0.9">
+      <path d="M0-236L62-62L236 0L62 62L0 236L-62 62L-236 0L-62-62Z"/>
+      <path d="M-166-166L166 166M166-166L-166 166"/>
+    </g>
+
+    <g class="palace">
+      <text x="-132" y="-124" text-anchor="middle">休</text>
+      <text x="0" y="-124" text-anchor="middle">生</text>
+      <text x="132" y="-124" text-anchor="middle">伤</text>
+      <text x="-132" y="12" text-anchor="middle">杜</text>
+      <text x="0" y="12" text-anchor="middle">戊</text>
+      <text x="132" y="12" text-anchor="middle">景</text>
+      <text x="-132" y="148" text-anchor="middle">死</text>
+      <text x="0" y="148" text-anchor="middle">惊</text>
+      <text x="132" y="148" text-anchor="middle">开</text>
+    </g>
+
+    <g transform="translate(0 0)">
+      <rect x="-64" y="-64" width="128" height="128" rx="4" fill="#7c1825" stroke="#d0a35f" stroke-width="3"/>
+      <path d="M-42-28H42M-42 0H42M-42 28H42M-24-44V44M24-44V44" stroke="#e7c899" stroke-width="2" opacity="0.42"/>
+      <text x="0" y="12" text-anchor="middle" class="sealText">遁甲</text>
+    </g>
+  </g>
+
+  <g transform="translate(600 1266)" filter="url(#sealShadow)">
+    <path d="M-206-70H206L238-38V70H-206L-238 38V-70Z" fill="#5e121d" stroke="#d9ae69" stroke-width="4"/>
+    <path d="M-184-48H184V48H-184Z" fill="none" stroke="#9b2c36" stroke-width="2"/>
+    <text x="0" y="16" text-anchor="middle" class="gate">入局问卦</text>
+  </g>
+
+  <g opacity="0.4">
+    <text x="600" y="1426" text-anchor="middle" class="faded">此局但作闲占，不作定论</text>
+    <path d="M392 1472H808" stroke="#4f3821" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.22" fill="none" stroke="#8c2733" stroke-width="4">
+    <rect x="260" y="1518" width="108" height="108" rx="4"/>
+    <rect x="832" y="1518" width="108" height="108" rx="4"/>
+  </g>
+  <text x="314" y="1562" text-anchor="middle" class="faded">值</text>
+  <text x="314" y="1598" text-anchor="middle" class="faded">符</text>
+  <text x="886" y="1562" text-anchor="middle" class="faded">腾</text>
+  <text x="886" y="1598" text-anchor="middle" class="faded">蛇</text>
+</svg>

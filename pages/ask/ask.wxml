@@ -1,0 +1,27 @@
+<view class="page-shell ask">
+  <view class="safe-content ask-content">
+    <view class="ask-title">写下所问之事</view>
+    <view class="gold-line ask-line"></view>
+
+    <textarea
+      class="question-input"
+      value="{{question}}"
+      maxlength="80"
+      placeholder="心中所问，写于此处"
+      placeholder-class="question-placeholder"
+      bindinput="onInput"
+      auto-height="{{false}}"
+    />
+
+    <button class="seal-button cast-button" bindtap="castChart">依时起局</button>
+  </view>
+
+  <view wx:if="{{casting}}" class="casting-mask">
+    <view class="lot-box">
+      <view class="lot-stick one">符</view>
+      <view class="lot-stick two">门</view>
+      <view class="lot-stick three">局</view>
+    </view>
+    <text class="casting-text">符签入局，九宫将成</text>
+  </view>
+</view>
