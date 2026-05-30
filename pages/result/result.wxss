@@ -2,13 +2,65 @@
   padding-bottom: 96rpx;
 }
 
+.result-title,
+.result-line,
+.question-text,
+.meta-row,
+.bureau-strip,
+.steps,
+.palace-grid,
+.reading,
+.result-actions {
+  opacity: 0;
+  transform: translateY(28rpx);
+}
+
+.result.ready .result-title {
+  animation: resultLayerIn 420ms ease both;
+}
+
+.result.ready .result-line {
+  animation: resultLayerIn 420ms 40ms ease both;
+}
+
+.result.ready .question-text {
+  animation: resultLayerIn 420ms 80ms ease both;
+}
+
+.result.ready .meta-row {
+  animation: resultLayerIn 420ms 140ms ease both;
+}
+
+.result.ready .bureau-strip {
+  animation: resultLayerIn 420ms 220ms ease both;
+}
+
+.result.ready .steps {
+  animation: resultLayerIn 420ms 300ms ease both;
+}
+
+.result.ready .palace-grid {
+  animation: resultLayerIn 460ms 380ms ease both;
+}
+
+.result.ready .reading {
+  animation: resultLayerIn 460ms 460ms ease both;
+}
+
+.result.ready .result-actions {
+  animation: resultLayerIn 420ms 540ms ease both;
+}
+
+.result.leaving .result-content {
+  animation: resultFadeOut 320ms ease both;
+}
+
 .result-title {
   margin-top: 28rpx;
   color: #e0c18a;
   font-size: 56rpx;
   font-weight: 700;
   text-align: center;
-  animation: fadeRise 680ms ease both;
 }
 
 .result-line {
@@ -209,4 +261,30 @@
 .action-button-active {
   transform: translateY(3rpx);
   opacity: 0.86;
+}
+
+.result-transfer {
+  animation: transferIn 320ms ease both;
+}
+
+@keyframes resultLayerIn {
+  from {
+    opacity: 0;
+    transform: translateY(28rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resultFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(18rpx);
+  }
 }

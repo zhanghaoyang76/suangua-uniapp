@@ -1,7 +1,17 @@
 Page({
+  data: {
+    entering: false
+  },
+
   enterAsk() {
-    wx.navigateTo({
-      url: '/pages/ask/ask'
-    })
+    if (this.data.entering) return
+
+    this.setData({ entering: true })
+    setTimeout(() => {
+      wx.navigateTo({
+        url: '/pages/ask/ask'
+      })
+      this.setData({ entering: false })
+    }, 360)
   }
 })

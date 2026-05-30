@@ -180,3 +180,7 @@
   margin-top: 76rpx;
   opacity: 0.86;
 }
+
+.home-transfer {
+  animation: transferIn 360ms ease both;
+}

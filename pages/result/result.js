@@ -6,7 +6,9 @@ Page({
   data: {
     question: '',
     chart: null,
-    reading: null
+    reading: null,
+    ready: false,
+    leaving: false
   },
 
   onLoad(options) {
@@ -19,6 +21,9 @@ Page({
       chart,
       reading
     })
+    setTimeout(() => {
+      this.setData({ ready: true })
+    }, 30)
   },
 
   askAi() {
@@ -44,8 +49,13 @@ Page({
   },
 
   backHome() {
-    wx.reLaunch({
-      url: '/pages/index/index'
-    })
+    if (this.data.leaving) return
+
+    this.setData({ leaving: true })
+    setTimeout(() => {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }, 320)
   }
 })

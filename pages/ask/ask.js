@@ -20,6 +20,7 @@ Page({
   data: {
     question: '',
     casting: false,
+    transitionOut: false,
     castCount: 0,
     requiredCastCount: RITUAL_STEPS.length,
     gridCells: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -58,13 +59,17 @@ Page({
     }, castingState))
     setTimeout(() => {
       if (isComplete) {
-        wx.navigateTo({
-          url: `/pages/result/result?question=${encodeURIComponent(question)}`
-        })
-        this.setData(Object.assign({
-          casting: false,
-          castCount: 0
-        }, getStepState(0)))
+        this.setData({ transitionOut: true })
+        setTimeout(() => {
+          wx.navigateTo({
+            url: `/pages/result/result?question=${encodeURIComponent(question)}`
+          })
+          this.setData(Object.assign({
+            casting: false,
+            transitionOut: false,
+            castCount: 0
+          }, getStepState(0)))
+        }, 360)
         return
       }
 

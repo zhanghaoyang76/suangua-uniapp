@@ -107,6 +107,33 @@ button::after {
   font-size: 24rpx;
 }
 
+.page-transfer {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(116, 24, 32, 0.38), transparent 34%),
+    rgba(5, 3, 2, 0.82);
+}
+
+.transfer-seal {
+  width: 132rpx;
+  height: 132rpx;
+  color: #f6ddb0;
+  font-size: 52rpx;
+  font-weight: 700;
+  line-height: 132rpx;
+  text-align: center;
+  background: #7b1c20;
+  border: 5rpx solid #d0a35f;
+  border-radius: 8rpx;
+  box-shadow: 0 0 44rpx rgba(123, 28, 32, 0.72);
+  animation: transferSeal 360ms ease both;
+}
+
 @keyframes fadeRise {
   from {
     opacity: 0;
@@ -115,6 +142,30 @@ button::after {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes transferIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transferSeal {
+  0% {
+    opacity: 0;
+    transform: translateY(-46rpx) scale(1.18);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(8rpx) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

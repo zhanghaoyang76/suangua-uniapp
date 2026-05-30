@@ -63,4 +63,10 @@
     <text class="casting-text">{{currentStep.title}}入局</text>
     <text class="casting-subtext">{{currentStep.note}}</text>
   </view>
+
+  <view wx:if="{{transitionOut}}" class="page-transfer ask-transfer">
+    <view class="transfer-grid">
+      <text wx:for="{{gridCells}}" wx:key="*this"></text>
+    </view>
+  </view>
 </view>

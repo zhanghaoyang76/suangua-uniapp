@@ -35,4 +35,8 @@
     <button class="seal-button entry-button" hover-class="seal-button-active" bindtap="enterAsk">入局问卦</button>
     <text class="muted-text footer-note">此局但作闲占，不作定论</text>
   </view>
+
+  <view wx:if="{{entering}}" class="page-transfer home-transfer">
+    <view class="transfer-seal">入</view>
+  </view>
 </view>

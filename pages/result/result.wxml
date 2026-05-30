@@ -1,4 +1,4 @@
-<view class="page-shell result">
+<view class="page-shell result {{ready ? 'ready' : ''}} {{leaving ? 'leaving' : ''}}">
   <view class="safe-content result-content">
     <view class="result-title">本局已成</view>
     <view class="gold-line result-line"></view>
@@ -58,5 +58,9 @@
       <button class="ai-button" hover-class="action-button-active" bindtap="askAi">AI 深度解读</button>
       <button class="home-button" hover-class="action-button-active" bindtap="backHome">返回首页</button>
     </view>
+  </view>
+
+  <view wx:if="{{leaving}}" class="page-transfer result-transfer">
+    <view class="transfer-seal">归</view>
   </view>
 </view>
