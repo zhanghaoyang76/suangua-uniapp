@@ -41,5 +41,11 @@ Page({
       .finally(() => {
         wx.hideLoading()
       })
+  },
+
+  backHome() {
+    wx.reLaunch({
+      url: '/pages/index/index'
+    })
   }
 })

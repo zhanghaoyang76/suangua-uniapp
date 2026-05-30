@@ -32,7 +32,7 @@
       <view class="center-seal">遁甲</view>
     </view>
 
-    <button class="seal-button entry-button" bindtap="enterAsk">入局问卦</button>
+    <button class="seal-button entry-button" hover-class="seal-button-active" bindtap="enterAsk">入局问卦</button>
     <text class="muted-text footer-note">此局但作闲占，不作定论</text>
   </view>
 </view>

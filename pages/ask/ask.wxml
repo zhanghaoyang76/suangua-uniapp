@@ -13,15 +13,54 @@
       auto-height="{{false}}"
     />
 
-    <button class="seal-button cast-button" bindtap="castChart">依时起局</button>
+    <view class="ritual-panel">
+      <view wx:for="{{ritualSteps}}" wx:key="title" class="ritual-step {{item.status}}">
+        <text class="ritual-mark">{{index + 1}}</text>
+        <view class="ritual-copy">
+          <text class="ritual-title">{{item.title}}</text>
+          <text class="ritual-note">{{item.note}}</text>
+        </view>
+      </view>
+    </view>
+    <text class="cast-hint">{{currentStep.title}}：{{currentStep.note}}</text>
+
+    <button class="seal-button cast-button" hover-class="seal-button-active" bindtap="castChart">{{castCount + 1 >= requiredCastCount ? '成局' : currentStep.title}}</button>
   </view>
 
   <view wx:if="{{casting}}" class="casting-mask">
-    <view class="lot-box">
-      <view class="lot-stick one">符</view>
-      <view class="lot-stick two">门</view>
-      <view class="lot-stick three">局</view>
+    <view class="casting-scene {{currentStep.anim}}">
+      <view class="seal-scene">
+        <view class="seal-paper"></view>
+        <view class="seal-stamp">问</view>
+      </view>
+
+      <view class="time-scene">
+        <view class="time-ring">
+          <text class="time-mark top">子</text>
+          <text class="time-mark right">卯</text>
+          <text class="time-mark bottom">午</text>
+          <text class="time-mark left">酉</text>
+          <view class="time-hand"></view>
+        </view>
+      </view>
+
+      <view class="dun-scene">
+        <view class="dun-card front">阳</view>
+        <view class="dun-card back">阴</view>
+        <view class="dun-number">局</view>
+      </view>
+
+      <view class="grid-scene">
+        <view wx:for="{{gridCells}}" wx:key="*this" class="grid-cell">{{item}}</view>
+      </view>
+
+      <view class="envoy-scene">
+        <view class="envoy-token symbol">值符</view>
+        <view class="envoy-token envoy">值使</view>
+        <view class="envoy-center">成</view>
+      </view>
     </view>
-    <text class="casting-text">符签入局，九宫将成</text>
+    <text class="casting-text">{{currentStep.title}}入局</text>
+    <text class="casting-subtext">{{currentStep.note}}</text>
   </view>
 </view>

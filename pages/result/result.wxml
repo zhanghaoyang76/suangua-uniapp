@@ -14,6 +14,24 @@
       <text>日 {{chart.dayGanzhi}} · 时 {{chart.hourGanzhi}}</text>
     </view>
 
+    <view class="bureau-strip">
+      <view class="bureau-item">
+        <text class="bureau-label">值符</text>
+        <text class="bureau-main">{{chart.valueSymbol.star}}</text>
+        <text class="bureau-sub">{{chart.valueSymbol.palace}}</text>
+      </view>
+      <view class="bureau-item">
+        <text class="bureau-label">值使</text>
+        <text class="bureau-main">{{chart.valueEnvoy.door}}</text>
+        <text class="bureau-sub">{{chart.valueEnvoy.palace}}</text>
+      </view>
+      <view class="bureau-item">
+        <text class="bureau-label">用宫</text>
+        <text class="bureau-main">{{chart.keyPalace.door}}</text>
+        <text class="bureau-sub">{{chart.keyPalace.name}}</text>
+      </view>
+    </view>
+
     <view class="steps">
       <view wx:for="{{chart.processSteps}}" wx:key="*this" class="step-item">{{item}}</view>
     </view>
@@ -36,6 +54,9 @@
       <view class="reading-item"><text>提醒：</text>{{reading.advice}}</view>
     </view>
 
-    <button class="ai-button" bindtap="askAi">AI 深度解读</button>
+    <view class="result-actions">
+      <button class="ai-button" hover-class="action-button-active" bindtap="askAi">AI 深度解读</button>
+      <button class="home-button" hover-class="action-button-active" bindtap="backHome">返回首页</button>
+    </view>
   </view>
 </view>
