@@ -35,7 +35,6 @@ function getProviderErrorMessage(data) {
   if (!data || typeof data !== 'object') return ''
   if (typeof data.message === 'string') return data.message
   if (data.error && typeof data.error === 'string') return data.error
-  if (data.error && typeof data.error.message === 'string') return data.error.message
   if (data.error && data.error.metadata && typeof data.error.metadata.raw === 'string') {
     try {
       const raw = JSON.parse(data.error.metadata.raw)
@@ -45,6 +44,7 @@ function getProviderErrorMessage(data) {
       return `${data.error.message || 'Provider returned error'}: ${data.error.metadata.raw.slice(0, 200)}`
     }
   }
+  if (data.error && typeof data.error.message === 'string') return data.error.message
   if (data.error && typeof data.error.msg === 'string') return data.error.msg
   if (typeof data.msg === 'string') return data.msg
   if (typeof data.code !== 'undefined') return `provider_code_${data.code}`
