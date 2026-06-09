@@ -30,7 +30,7 @@
 module.exports = {
   deepReadingEnabled: true,
   deepReadingEndpoint: 'http://127.0.0.1:8787/api/qimen-reading',
-  deepReadingTimeout: 20000
+  deepReadingTimeout: 45000
 }
 ```
 

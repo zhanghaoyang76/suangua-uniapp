@@ -7,6 +7,7 @@ const ZHIPU_THINKING_TYPE = process.env.ZHIPU_THINKING_TYPE || 'disabled'
 const ZHIPU_BASE_URL = process.env.ZHIPU_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4'
 const ZHIPU_TIMEOUT_MS = Number(process.env.ZHIPU_TIMEOUT_MS || 30000)
 const ZHIPU_MAX_TOKENS = Number(process.env.ZHIPU_MAX_TOKENS || 700)
+const IS_ZHIPU_PROVIDER = ZHIPU_BASE_URL.includes('open.bigmodel.cn')
 
 function getKeyInfo() {
   if (!ZHIPU_API_KEY) {
@@ -35,6 +36,15 @@ function getProviderErrorMessage(data) {
   if (typeof data.message === 'string') return data.message
   if (data.error && typeof data.error === 'string') return data.error
   if (data.error && typeof data.error.message === 'string') return data.error.message
+  if (data.error && data.error.metadata && typeof data.error.metadata.raw === 'string') {
+    try {
+      const raw = JSON.parse(data.error.metadata.raw)
+      const rawMessage = getProviderErrorMessage(raw)
+      if (rawMessage) return `${data.error.message || 'Provider returned error'}: ${rawMessage}`
+    } catch (error) {
+      return `${data.error.message || 'Provider returned error'}: ${data.error.metadata.raw.slice(0, 200)}`
+    }
+  }
   if (data.error && typeof data.error.msg === 'string') return data.error.msg
   if (typeof data.msg === 'string') return data.msg
   if (typeof data.code !== 'undefined') return `provider_code_${data.code}`
@@ -143,6 +153,29 @@ function makePrompt(payload) {
   ].join('\n')
 }
 
+function makeProviderRequestBody(payload) {
+  const body = {
+    model: ZHIPU_MODEL,
+    messages: [
+      {
+        role: 'user',
+        content: makePrompt(payload)
+      }
+    ],
+    max_tokens: ZHIPU_MAX_TOKENS,
+    temperature: 0.7,
+    stream: false
+  }
+
+  if (IS_ZHIPU_PROVIDER) {
+    body.thinking = {
+      type: ZHIPU_THINKING_TYPE
+    }
+  }
+
+  return body
+}
+
 async function requestZhipu(payload) {
   if (!ZHIPU_API_KEY) {
     throw new Error('ZHIPU_API_KEY_MISSING')
@@ -167,21 +200,7 @@ async function requestZhipu(payload) {
         authorization: `Bearer ${ZHIPU_API_KEY}`,
         'content-type': 'application/json'
       },
-      body: JSON.stringify({
-        model: ZHIPU_MODEL,
-        messages: [
-          {
-            role: 'user',
-            content: makePrompt(payload)
-          }
-        ],
-        max_tokens: ZHIPU_MAX_TOKENS,
-        temperature: 0.7,
-        thinking: {
-          type: ZHIPU_THINKING_TYPE
-        },
-        stream: false
-      })
+      body: JSON.stringify(makeProviderRequestBody(payload))
     })
     responseText = await response.text()
   } catch (error) {
